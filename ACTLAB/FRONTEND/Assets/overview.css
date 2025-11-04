@@ -1,0 +1,106 @@
+.overview {
+  padding: 1.5rem;
+}
+
+.overview-header {
+  margin-bottom: 1.5rem;
+}
+
+.overview-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.overview .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.overview .card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.overview .card:hover {
+  transform: translateY(-2px);
+}
+
+.overview .card-icon {
+  font-size: 1.6rem;
+  color: #1976D2;
+}
+
+.overview .card-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.overview .card-value {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.small {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.warning {
+  color: #e67e22;
+  font-weight: 600;
+}
+
+/* Mini barras discretas */
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 4px;
+  height: 6px;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.progress {
+  background: #1976D2;
+  height: 100%;
+  border-radius: 4px;
+}
+
+/* Acciones rápidas */
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.action-btn {
+  background: #1976D2;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+}
+
+.action-btn:hover {
+  background: #1255a6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .overview .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

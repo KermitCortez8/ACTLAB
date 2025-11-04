@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reportes | SWALCACT</title>
+
+  <!-- Estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../Assets/base.css">
+  <link rel="stylesheet" href="../Assets/layout.css">
+  <link rel="stylesheet" href="../Assets/components.css">
+</head>
+
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <img src="../assets2/img/logo.jpg" alt="Logo ACT" class="brand-logo">
+        <span class="brand-text">SWALCACT</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="/admin" class="nav-item" data-tooltip="Inicio">
+          <i class="fa-solid fa-house nav-icon"></i>
+          <span class="nav-text">Inicio</span>
+        </a>
+        <a href="/admin/pacientes" class="nav-item" data-tooltip="Pacientes">
+          <i class="fa-solid fa-user-injured nav-icon"></i>
+          <span class="nav-text">Pacientes</span>
+        </a>
+        <a href="/admin/citas" class="nav-item" data-tooltip="Citas">
+          <i class="fa-solid fa-calendar-days nav-icon"></i>
+          <span class="nav-text">Citas</span>
+        </a>
+        <a href="/admin/resultados" class="nav-item" data-tooltip="Resultados">
+          <i class="fa-solid fa-vial nav-icon"></i>
+          <span class="nav-text">Resultados</span>
+        </a>
+        <a href="/admin/reportes" class="nav-item active" data-tooltip="Reportes">
+          <i class="fa-solid fa-chart-line nav-icon"></i>
+          <span class="nav-text">Reportes</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="/" class="nav-item" data-tooltip="Salir">
+          <i class="fa-solid fa-right-from-bracket nav-icon"></i>
+          <span class="nav-text">Salir</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="left">
+          <button class="btn-icon" id="sidebarToggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <h1>Reportes</h1>
+        </div>
+        <div class="right">
+          <img src="../assets2/img/avatar-admin.jpg" alt="Admin" class="avatar small-avatar">
+        </div>
+      </header>
+
+      <section class="empty-section">
+        <i class="fa-solid fa-chart-line"></i>
+        <h2>Sección en construcción</h2>
+        <p>El módulo de reportes estará disponible próximamente.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../public/admin-layout.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+  gap: 1rem;
+}
+.kpi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.kpi-title { font-size: 0.9rem; color: var(--muted); }
+.kpi-value { font-weight: 700; }
+.kpi-icon { font-size: 1.8rem; color: var(--primary); }
+
+.btn-icon {
+  background: transparent;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  transition: background 0.2s;
+}
+.btn-icon:hover {
+  background: rgba(0,0,0,0.05);
+}
+.cta-button {
+  background: var(--primary);
+  color: var(--white);
+  border-radius: var(--small-radius);
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  transition: background-color 0.2s ease;
+}
+.cta-button:hover {
+  background: var(--primary-light);
+}
+

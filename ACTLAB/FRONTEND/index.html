@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACT Clínica | Cuidamos de tu salud</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="Assets/Style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Iconos FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Script principal -->
+  <script defer src="./Scripts/mainLanding.js"></script>
+</head>
+<body>
+  <!--  NAVBAR -->
+  <header class="navbar">
+    <a href="#inicio" class="logo">ACT<span>Clínica</span></a>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#especialistas">Especialistas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--  HERO -->
+  <section id="inicio" class="hero">
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img class="carousel-slide" src="https://cdn.pixabay.com/photo/2015/07/10/20/54/stethoscope-840125_1280.jpg" alt="Instalaciones 1">
+        <img class="carousel-slide" src="https://img.freepik.com/foto-gratis/medico-estetoscopio-tablet_23-2148168367.jpg" alt="Instalaciones 2">
+        <img class="carousel-slide" src="https://images.unsplash.com/photo-1730040762827-2d5275cfdbf7?q=80&w=1169&auto=format&fit=crop" alt="Instalaciones 3">
+      </div>
+      <div class="carousel-indicators"></div>
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content glass">
+      <h1>Tu salud, nuestra prioridad</h1>
+      <p>En ACT Clínica te brindamos atención médica integral con profesionales altamente calificados.</p>
+      <a href="login.html" class="btn-primary">
+        <i class="fas fa-calendar-check"></i> Reserva tu cita en 1 minuto
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="services">
+    <h2>Nuestros Servicios</h2>
+    <div class="service-grid">
+      <div class="service-item glass">
+        <i class="fas fa-stethoscope"></i>
+        <h3>Consulta Médica</h3>
+        <p>Atención personalizada con los mejores especialistas en diversas áreas de la salud.</p>
+      </div>
+      <div class="service-item glass">
+        <i class="fas fa-heartbeat"></i>
+        <h3>Cardiología</h3>
+        <p>Evaluaciones completas para el diagnóstico y cuidado de tu corazón.</p>
+      </div>
+      <div class="service-item glass">
+        <i class="fas fa-x-ray"></i>
+        <h3>Radiología</h3>
+        <p>Tecnología moderna para estudios precisos y confiables.</p>
+      </div>
+      <div class="service-item glass">
+        <i class="fas fa-syringe"></i>
+        <h3>Laboratorio Clínico</h3>
+        <p>Análisis clínicos rápidos y seguros con resultados digitales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--  ESPECIALISTAS -->
+  <section id="especialistas" class="specialists">
+    <h2>Nuestros Especialistas</h2>
+    <div class="specialists-grid">
+      <div class="doctor-card glass">
+        <img src="https://media.istockphoto.com/id/2151681873/photo/doctor-consulting-patient-in-medical-office.jpg?s=2048x2048&w=is&k=20&c=pawAjR34OQzPirthI6Ubdk1i7itSNqKUEjwRGgCdBf0=" alt="Doctor 1" />
+        <h3>Dr. Luis Fernández</h3>
+        <p>Cardiólogo</p>
+      </div>
+      <div class="doctor-card glass">
+        <img src="https://media.istockphoto.com/id/2159569001/photo/doctor-and-newborn-in-hospital-setting.jpg?s=2048x2048&w=is&k=20&c=zZIo5Q5_XfwAftpzLmeKLqiO-Z8ckoA_hXkCqw96bYo=" alt="Doctor 2" />
+        <h3>Dra. Ana Torres</h3>
+        <p>Pediatra</p>
+      </div>
+      <div class="doctor-card glass">
+        <img src="https://media.istockphoto.com/id/2177425114/photo/mri-scan-examination-with-elderly-patient-and-nurse.jpg?s=2048x2048&w=is&k=20&c=jTi95nBOcm_VBmPT_GyKi6fNHPuazYamHDDSIZHRPCM=" alt="Doctor 3" />
+        <h3>Dr. Carlos Mejía</h3>
+        <p>Radiología</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact">
+    <h2>Contáctanos</h2>
+    <p>Déjanos tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
+    <form class="contact-form glass">
+      <input type="text" placeholder="Nombre completo" required />
+      <input type="email" placeholder="Correo electrónico" required />
+      <textarea placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit" class="btn-primary">Enviar</button>
+    </form>
+  </section>
+
+  <!-- ⚕️ FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 ACT Clínica. Todos los derechos reservados.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTONES FLOTANTES -->
+  <a href="login.html" class="reserve-btn">
+    <i class="fas fa-calendar-check"></i> Reservar Cita
+  </a>
+  <a href="https://wa.me/51987654321" target="_blank" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+  </a>
+</body>
+</html>

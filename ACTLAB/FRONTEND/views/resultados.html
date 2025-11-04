@@ -1,0 +1,51 @@
+<section class="resultados">
+  <!-- Encabezado -->
+  <div class="section-header">
+    <h1 class="page-title">Selecciona Pruebas</h1>
+    <p class="muted">Gestiona y revisa tus resultados de laboratorio.</p>
+  </div>
+
+  <!-- Resumen del análisis -->
+  <div class="card resumen">
+    <h3>Último análisis registrado</h3>
+    <div class="resumen-datos">
+      <p><strong>Examen:</strong> Perfil lipídico</p>
+      <p><strong>Fecha:</strong> 20 Sep 2025</p>
+      <p><strong>Estado:</strong> 
+        <span class="chip normal" role="status" aria-live="polite">
+          ✅ Normal
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Card con tabla de pruebas -->
+  <div class="card">
+    <h2 class="card-title">Mostrando Pruebas</h2>
+    
+    <div class="table-wrapper">
+      <table class="tabla-pruebas" aria-label="Lista de pruebas de laboratorio">
+        <thead>
+          <tr>
+            <th scope="col">Tipo de Examen</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="pruebas-tbody">
+          <!-- Las pruebas se cargarán dinámicamente desde JavaScript -->
+        </tbody>
+      </table>
+</div>
+  </div>
+
+<!-- Botón para volver al inicio -->
+  <div class="actions-footer">
+    <button class="btn btn-outline" onclick="window.location.hash = '#overview'">
+      <i class="fa-solid fa-arrow-left"></i>
+      Volver al Inicio
+    </button>
+  </div>
+  </section>
+

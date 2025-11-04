@@ -1,0 +1,72 @@
+:root {
+  --primary: #1e88e5;
+  --primary-light: #42a5f5;
+  --danger: #e53935;
+  --success: #43a047;
+  --warn: #fb8c00;
+  --text: #212121;
+  --muted: #757575;
+  --bg: #f9fafa;
+  --white: #ffffff;
+  --radius: 12px;
+  --small-radius: 6px;
+  --shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+  
+}
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+.muted { color: var(--muted); }
+
+/* 🌐 Responsive general */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0 !important;
+  }
+
+  .topbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1100;
+  }
+
+  .main section {
+    padding-top: 70px; /* espacio debajo del topbar */
+  }
+
+  /* Corrige cards o grids muy anchos */
+  .card, .doctor, .cita-card, .timeline-content {
+    margin: 0.5rem;
+  }
+
+  /* Ajuste de textos */
+  h1, h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  p, span {
+    font-size: 0.9rem;
+  }
+
+  /* Botones adaptables */
+  .cta-button, .action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Tablas desplazables */
+  .table-wrapper {
+    overflow-x: auto;
+  }
+}

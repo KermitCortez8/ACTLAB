@@ -1,0 +1,93 @@
+/* Sección */
+.section {
+  padding: 2rem 1rem; /* agrega espacio arriba y abajo de la sección */
+}
+
+/* Encabezado de sección */
+.section-header {
+  margin-bottom: 1.5rem; /* separa el header del grid */
+}
+
+
+/* Tarjeta de doctor */
+.doctor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+.doctor:hover {
+  transform: translateY(-4px);
+}
+
+.doc-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1976D2;
+}
+
+.doc-info {
+  flex: 1;
+  padding-left: 0.5rem; /* separación entre imagen y texto */
+}
+
+.doc-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.doc-specialty {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Botones */
+.doc-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.chip.small {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.chip.secondary {
+  background: #f1f1f1;
+  color: #333;
+}
+
+.chip.small:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid.grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .doctor {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem; /* ajusta padding en móvil */
+  }
+  .doc-info {
+    padding-left: 0;
+  }
+  .doc-actions {
+    justify-content: center;
+  }
+}
