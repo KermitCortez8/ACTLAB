@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACT Clínica | Panel de Usuario</title>
+  <link rel="stylesheet" href="Assets/styleUser.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="user-header">
+    <h1>Bienvenido, <span id="username">Paciente</span></h1>
+    <button id="logout" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Salir</button>
+  </header>
+
+<!-- Solicitar cita -->
+<section class="appointment" id="cita">
+  <div class="container">
+    <h2>Solicita tu Cita</h2>
+    <p>Agenda fácilmente tu consulta en línea con nuestros especialistas.</p>
+
+    <!-- Mostrar nombre del paciente automáticamente -->
+    <div class="patient-info">
+      <p><strong>Paciente:</strong> <span id="username">Paciente</span></p>
+    </div>
+
+    <!-- Formulario simplificado -->
+    <form class="appointment-form">
+      <select required>
+        <option value="">Seleccione especialidad</option>
+        <option>Medicina General</option>
+        <option>Pediatría</option>
+        <option>Cardiología</option>
+      </select>
+      <input type="date" required>
+      <input type="time" required>
+      <button type="submit" class="btn">Agendar Cita</button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Dashboard -->
+  <main class="dashboard">
+    <div class="icon-item">
+      <div class="icon-circle"><i class="fas fa-headset"></i></div>
+      <p>Soporte</p>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle"><i class="fas fa-briefcase-medical"></i></div>
+      <p>Servicios</p>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle"><i class="fas fa-clock"></i></div>
+      <p>Horario</p>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle"><i class="fas fa-vials"></i></div>
+      <p>Resultados</p>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle"><i class="fas fa-calendar-check"></i></div>
+      <p>Mis Citas</p>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle"><i class="fas fa-file-alt"></i></div>
+      <p>Documentos</p>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+      <p>Dirección</p>
+    </div>
+    <div class="icon-item">
+      <div class="icon-circle"><i class="fas fa-user-circle"></i></div>
+      <p>Mi Perfil</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 ACT Clínica - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="Scripts/mainUser.js"></script>
+  <script>
+    // Recuperar usuario de localStorage
+    const usuario = localStorage.getItem("usuario") || "Paciente";
+    document.getElementById("username").textContent = usuario;
+
+    // Cerrar sesión
+    const logoutBtn = document.getElementById("logout");
+    logoutBtn.addEventListener("click", function(){
+      localStorage.removeItem("usuario"); // limpiamos los datos guardados
+      window.location.href = "login.html"; // regresamos al login
+    });
+  </script>
+</body>
+</html>

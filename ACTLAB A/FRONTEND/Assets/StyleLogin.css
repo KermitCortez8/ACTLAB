@@ -1,0 +1,118 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f7ff;  /* Fondo suave */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Barra de navegación */
+header {
+  background-color: #00aaff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que la barra de navegación esté encima del contenido */
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Estilo del formulario de login */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  padding-top: 80px; /* Asegura que el contenido no quede cubierto por la barra de navegación */
+}
+
+.login-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.login-form h2 {
+  color: #00aaff;
+}
+
+.login-form h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.login-form input, .login-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #0088cc;
+}
+
+.login-form p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-form p a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+.login-form p a:hover {
+  text-decoration: underline;
+}
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #00aaff;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #E0F7FF;
+  margin-top: auto; /* Asegura que el pie de página se mueva hacia el fondo */
+}

@@ -1,0 +1,227 @@
+:root {
+  --primary: #0073E6;
+  --primary-dark: #005bb5;
+  --light: #ffffff;
+  --dark: #333333;
+  --radius: 12px;
+  --transition: 0.3s ease;
+  --font: 'Poppins', sans-serif;
+  --bg-light: #f4f8fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.user-header {
+  background: var(--primary);
+  color: var(--light);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.user-header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.btn-logout {
+  background: var(--light);
+  color: var(--primary);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all var(--transition);
+  font-weight: 600;
+}
+.btn-logout:hover {
+  background: var(--primary-dark);
+  color: var(--light);
+}
+
+/* Dashboard */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+  transition: all 0.4s ease-in-out; /* transición suave */
+}
+
+.icon-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+
+  animation-fill-mode: forwards;
+
+  text-align: center;
+  cursor: pointer;
+}
+.icon-item:nth-child(1) { animation-delay: 0.1s; }
+.icon-item:nth-child(2) { animation-delay: 0.2s; }
+.icon-item:nth-child(3) { animation-delay: 0.3s; }
+.icon-item:nth-child(4) { animation-delay: 0.4s; }
+.icon-item:nth-child(5) { animation-delay: 0.5s; }
+.icon-item:nth-child(6) { animation-delay: 0.6s; }
+.icon-item:nth-child(7) { animation-delay: 0.7s; }
+.icon-item:nth-child(8) { animation-delay: 0.8s; }
+
+/* ... */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.icon-item:hover {
+  transform: translateY(-6px) scale(1.05); /* movimiento extra al hover */
+  transition: transform 0.3s ease;
+}
+
+.card {
+  background: var(--light);
+  border-radius: var(--radius);
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.appointment {
+  background: var(--light);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.appointment h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.appointment-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.appointment-form input,
+.appointment-form select {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+}
+
+.patient-info {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--dark);
+}
+.patient-info strong {
+  color: var(--primary);
+}
+
+
+
+.appointment-form button {
+  background: var(--primary);
+  color: var(--light);
+  padding: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.appointment-form button:hover {
+  background: var(--secondary);
+}
+
+
+/* Iconos circulares */
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--primary);
+  margin: 0 auto 0.5rem;
+  background: var(--light);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: all var(--transition);
+}
+.card:hover .icon-circle {
+  background: var(--primary);
+  color: var(--light);
+}
+
+.icon-item:hover .icon-circle {
+  transform: scale(1.1);
+  background: var(--primary);
+  color: var(--light);
+}
+.icon-item:active {
+  transform: scale(0.95);
+}
+
+
+.icon-item p {
+  font-weight: 600;
+  color: var(--dark);
+  font-size: 1rem;
+}
+
+.card p {
+  font-weight: 600;
+  color: var(--dark);
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+  background: var(--primary-dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Tablets (pantallas medianas): 2 columnas */
+@media (max-width: 992px) {
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celulares (pantallas pequeñas): 1 columna */
+@media (max-width: 576px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}

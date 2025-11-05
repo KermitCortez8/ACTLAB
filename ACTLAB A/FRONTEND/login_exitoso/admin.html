@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard Administrador | SWALCACT</title>
+
+    <!-- Fuentes & Iconos -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS global -->
+    <link rel="stylesheet" href="../Assets/base.css" />
+    <link rel="stylesheet" href="../Assets/layout.css" />
+    <link rel="stylesheet" href="../Assets/components.css" />
+    <link rel="stylesheet" href="../Assets/admin-overview.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <img
+            src="../assets2/img/logo.jpg"
+            alt="Logo SWALCACT"
+            class="brand-logo"
+          />
+          <span class="brand-text">SWALCACT</span>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="/admin" class="nav-item active" data-tooltip="Inicio">
+            <i class="fa-solid fa-house nav-icon"></i>
+            <span class="nav-text">Inicio</span>
+          </a>
+
+          <a href="/admin/pacientes" class="nav-item" data-tooltip="Pacientes">
+            <i class="fa-solid fa-user-injured nav-icon"></i>
+            <span class="nav-text">Pacientes</span>
+          </a>
+
+          <a href="/admin/citas" class="nav-item" data-tooltip="Citas">
+            <i class="fa-solid fa-calendar-days nav-icon"></i>
+            <span class="nav-text">Citas</span>
+          </a>
+
+          <a
+            href="/admin/resultados"
+            class="nav-item"
+            data-tooltip="Resultados"
+          >
+            <i class="fa-solid fa-vial nav-icon"></i>
+            <span class="nav-text">Resultados</span>
+          </a>
+
+          <a href="/admin/reportes" class="nav-item" data-tooltip="Reportes">
+            <i class="fa-solid fa-chart-line nav-icon"></i>
+            <span class="nav-text">Reportes</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="/login" class="nav-item" data-tooltip="Salir">
+            <i class="fa-solid fa-right-from-bracket nav-icon"></i>
+            <span class="nav-text">Salir</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+        <header class="topbar">
+          <div class="left">
+            <button class="btn-icon" id="sidebarToggle" aria-label="Abrir menú">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <h1>Panel del Administrador</h1>
+          </div>
+          <div class="right">
+            <img
+              src="../assets2/img/avatar-admin.jpg"
+              alt="Avatar del Administrador"
+              class="avatar small-avatar"
+            />
+          </div>
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <section class="overview">
+          <h2>Resumen General</h2>
+          <div class="stats-grid">
+            <div class="stat-card blue">
+              <i class="fa-solid fa-calendar-day"></i>
+              <div>
+                <h4>Citas del Día</h4>
+                <p id="citas-dia">15</p>
+                <span>+3 nuevas hoy</span>
+              </div>
+            </div>
+            <div class="stat-card green">
+              <i class="fa-solid fa-user-injured"></i>
+              <div>
+                <h4>Pacientes Registrados</h4>
+                <p id="pacientes-total">245</p>
+                <span>5 nuevos esta semana</span>
+              </div>
+            </div>
+            <div class="stat-card purple">
+              <i class="fa-solid fa-vial"></i>
+              <div>
+                <h4>Resultados Emitidos</h4>
+                <p id="resultados-total">8</p>
+                <span>En las últimas 24h</span>
+              </div>
+            </div>
+            <div class="stat-card orange">
+              <i class="fa-solid fa-flask"></i>
+              <div>
+                <h4>Muestras Recolectadas</h4>
+                <p id="muestras-total">12</p>
+                <span>En proceso</span>
+              </div>
+            </div>
+            <div class="stat-card gray">
+              <i class="fa-solid fa-coins"></i>
+              <div>
+                <h4>Pagos Recibidos</h4>
+                <p id="pagos-total">S/ 2,150</p>
+                <span>Hoy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 🔹 NUEVA SECCIÓN DE GRÁFICOS -->
+          <h3>Visualización General</h3>
+          <div class="charts-grid">
+            <div class="chart-card">
+              <h4><i class="fa-solid fa-calendar-day"></i> Citas de la Semana</h4>
+              <canvas id="chartCitasSemana"></canvas>
+            </div>
+            <div class="chart-card">
+              <h4><i class="fa-solid fa-vial"></i> Exámenes más Solicitados</h4>
+              <canvas id="chartExamenes"></canvas>
+            </div>
+            <div class="chart-card">
+              <h4><i class="fa-solid fa-user-plus"></i> Pacientes Nuevos por Mes</h4>
+              <canvas id="chartPacientesMes"></canvas>
+            </div>
+          </div>
+
+          <!-- Resto del contenido -->
+          <h3>Acciones Rápidas</h3>
+          <div class="quick-actions">
+            <button class="action-btn">
+              <i class="fa-solid fa-user-plus"></i> Registrar Paciente
+            </button>
+            <button class="action-btn">
+              <i class="fa-solid fa-calendar-plus"></i> Crear Cita
+            </button>
+            <button class="action-btn">
+              <i class="fa-solid fa-vial"></i> Registrar Muestra
+            </button>
+            <button class="action-btn">
+              <i class="fa-solid fa-flask"></i> Emitir Resultado
+            </button>
+            <button class="action-btn">
+              <i class="fa-solid fa-chart-line"></i> Generar Reporte
+            </button>
+          </div>
+
+          <h3>Alertas</h3>
+          <div class="alerts-grid">
+            <div class="alert-card warning">
+              <i class="fa-solid fa-bell"></i>
+              <p>2 citas sin confirmar para hoy</p>
+            </div>
+            <div class="alert-card primary">
+              <i class="fa-solid fa-vial-circle-check"></i>
+              <p>3 resultados pendientes de revisión</p>
+            </div>
+            <div class="alert-card danger">
+              <i class="fa-solid fa-flask-vial"></i>
+              <p>1 muestra con más de 24h sin procesar</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../public/admin-overview.js" defer></script>
+    <script src="../public/admin-layout.js" defer></script>
+  </body>
+</html>

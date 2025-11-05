@@ -1,0 +1,132 @@
+.profile {
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9fb;
+  color: #333;
+}
+
+/* Cabecera de perfil */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  border-left: 5px solid #1976D2;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #1976D2;
+}
+
+/* Texto de cabecera */
+.profile-header h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.profile-header .muted {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Grid compacto */
+.grid.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Tarjetas más pequeñas */
+.profile .card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Títulos de sección */
+.profile .card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #1976D2;
+  font-weight: 600;
+}
+
+/* Filas de detalle compactas */
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.detail-row i {
+  color: #1976D2;
+  min-width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.detail-row span {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Chips compactos */
+.chip {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.chip.info { background: #e0f7fa; color: #00796b; }
+.chip.alerta { background: #ffeaea; color: #e53935; }
+.chip.warning { background: #fff4e5; color: #e67e22; }
+
+/* Botón pequeño y compacto */
+.btn-primary {
+  background: #1976D2;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.btn-primary:hover {
+  background: #1255a6;
+}
+
+.edit-btn-container {
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid.grid-2 { grid-template-columns: 1fr; }
+  .profile-header { flex-direction: column; align-items: center; text-align: center; }
+  .profile-avatar { width: 70px; height: 70px; }
+}

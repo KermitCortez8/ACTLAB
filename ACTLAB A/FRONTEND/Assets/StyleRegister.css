@@ -1,0 +1,136 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f7ff;  /* Fondo suave */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Asegura que el body ocupe todo el alto de la pantalla */
+}
+
+/* Barra de navegación */
+header {
+  background-color: #00aaff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Estilo del formulario de registro */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;  /* Permite que el contenedor ocupe el espacio restante */
+  padding-top: 20px;  /* Asegura que el contenido no quede cubierto por el encabezado */
+}
+
+/* Estilo del formulario de registro */
+.register-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.register-form h2 {
+  color: #00aaff;
+}
+
+.register-form h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.register-form input, .register-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background-color: #0088cc;
+}
+
+.register-form p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.register-form p a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+.register-form p a:hover {
+  text-decoration: underline;
+}
+
+/* Radio buttons for age selection */
+.age-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #00aaff;  /* Fondo más claro */
+  color: #E0F7FF; /* Color del texto */
+  font-size: 14px;  /* Ajusta el tamaño del texto */
+  margin-top: auto; /* Asegura que el pie de página se quede al fondo */
+  width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
+}
+
+footer a {
+  color: #0073E6; /* Color de los enlaces */
+  text-decoration: none; /* Quitar subrayado */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Subrayar en hover */
+}
+
